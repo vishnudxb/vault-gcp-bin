@@ -20,3 +20,5 @@ RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/install_google_cloud_s
     mv vault /usr/local/bin
 
 ENTRYPOINT ["/bin/bash"]
+
+CMD tail -f -n0 /etc/hosts
