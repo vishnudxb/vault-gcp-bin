@@ -5,6 +5,7 @@ MAINTAINER Vishnu Nair <me@vishnudxb.me>
 ENV PATH="/tmp/google-cloud-sdk/bin:${PATH}"
 
 RUN mkdir /src
+
 WORKDIR /src
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -18,7 +19,5 @@ RUN wget https://dl.google.com/dl/cloudsdk/channels/rapid/install_google_cloud_s
     curl -O https://releases.hashicorp.com/vault/1.3.2/vault_1.3.2_linux_amd64.zip && \
     unzip vault_1.3.2_linux_amd64.zip && \
     mv vault /usr/local/bin
-
-ENTRYPOINT ["/bin/bash"]
 
 CMD tail -f -n0 /etc/hosts
